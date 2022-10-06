@@ -1,38 +1,125 @@
 .App {
   text-align: center;
+  box-sizing:border-box;
+  margin:   50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.date-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+  background-color: #bddfea;
+  padding: 10px;
+  border-radius: 15px;
+  
+  
+}
+
+.date{
+  display: flex;
+  flex-direction: row;  
+  align-items: center; 
+  margin-right: 100px;
+}
+
+h3{
+  margin-right: 30px;
+  color: #1a6acb;
+}
+
+.type-container{
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  background-color: #bddfea;
+  padding: 10px;
+  border-radius: 15px;
+  
+}
+
+.result{
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  
+}
+.result h3{
+  color: #37aed6;
+}
+.date-result{
+ 
+  margin-top: 100px;
+}
+
+button{
+  background-color: #008CBA;
   color: white;
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+input[type="submit"]{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+label{
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type="submit"]:hover{
+  opacity: 0.6;
+}
+button:hover{
+  opacity: 0.6;
+}
+.date-picker input {
+  width:100%;
+
+}
+.react-datepicker__day--today{
+  background-color: #ce0c0c;  
+}
+
+.react-datepicker__day--today:hover{
+  background-color: white; 
+  color: black;
+  outline: solid;
+  outline-offset: 0;
+  outline-color: #ce0c0c;
+}
+
+.react-datepicker__day--highlighted{
+  background-color: #37aed6;
+}
+
+.react-datepicker__day--highlighted:hover{
+  background-color: #83cae1;
+}
+
+@media screen and (max-width: 1000px) {
+  .date-container{flex-direction: column;}
+  .type-container{flex-direction: column;}
+  .result{flex-direction: column;}
+  .date-result{margin-top: 0px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }
